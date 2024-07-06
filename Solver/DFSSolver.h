@@ -6,9 +6,6 @@
 #ifndef RUBIKS_CUBE_SOLVER_DFSSOLVER_H
 #define RUBIKS_CUBE_SOLVER_DFSSOLVER_H
 
-// Typename T: RubiksCube Representation used (3d, 1d, Bitboard)
-// Typename H: Corresponding Hash function
-
 template<typename T, typename H>
 class DFSSolver {
 private:
@@ -16,7 +13,6 @@ private:
     vector<RubiksCube::MOVE> moves;
     int max_search_depth;
 
-//    DFS code to find the solution (helper function)
     bool dfs(int dep) {
         if (rubiksCube.isSolved()) return true;
         if (dep > max_search_depth) return false;

@@ -4,8 +4,7 @@
 #ifndef RUBIKS_CUBE_SOLVER_BFSSOLVER_H
 #define RUBIKS_CUBE_SOLVER_BFSSOLVER_H
 
-// Typename T: RubiksCube Representation used (3d, 1d, Bitboard)
-// Typename H: Corresponding Hash function
+
 
 template<typename T, typename H>
 class BFSSolver {
@@ -14,8 +13,7 @@ private:
     unordered_map<T, bool, H> visited;
     unordered_map<T, RubiksCube::MOVE, H> move_done;
 
-//    bfs() -> performs breadth-first-search and returns a solved Rubik's Cube
-//    move_done[] -> Back-Pointer map as to how we reached that state
+
     T bfs() {
         queue<T> q;
         q.push(rubiksCube);
@@ -48,7 +46,7 @@ public:
         rubiksCube = _rubiksCube;
     }
 
-//    Performs BFS and returns the vector of moves done to solve the cube
+
     vector<RubiksCube::MOVE> solve() {
         T solved_cube = bfs();
         assert(solved_cube.isSolved());

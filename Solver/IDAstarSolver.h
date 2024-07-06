@@ -37,10 +37,8 @@ private:
         visited.clear();
     }
 
-// returns {solved cube, bound}: if the cube was solved
-// returns {rubiksCube, next_bound}, if the cube was not solved
     pair<T, int> IDAstar(int bound) {
-//        priority_queue contains pair(Node, move done to reach that)
+
         priority_queue<pair<Node, int>, vector<pair<Node, int>>, compareCube> pq;
         Node start = Node(rubiksCube, 0, cornerDB.getNumMoves(rubiksCube));
         pq.push(make_pair(start, 0));

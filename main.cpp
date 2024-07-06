@@ -16,7 +16,6 @@ int main() {
 
 
 
-// CornerDBMaker Testing --------------------------------------------------------------------------
     string fileName = "C:\\Users\\user\\CLionProjects\\rubiks-cube-solver\\Databases\\cornerDepth5V1.txt";
 
 

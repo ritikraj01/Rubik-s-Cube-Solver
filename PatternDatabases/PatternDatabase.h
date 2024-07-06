@@ -17,7 +17,7 @@ class PatternDatabase {
 
 public:
     PatternDatabase(const size_t size);
-//    Testing for init_val
+    
     PatternDatabase(const size_t size, uint8_t init_val);
 
     virtual uint32_t getDatabaseIndex(const RubiksCube &cube) const = 0;

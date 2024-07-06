@@ -1,12 +1,8 @@
-//
-// Created by Shubham Patil on 17/12/21.
-//
+
 
 #include "RubiksCube.h"
 
-//
-//Given a color return it's first letter
-//
+
 
 char RubiksCube::getColorLetter(COLOR color) {
     switch (color) {
@@ -25,9 +21,7 @@ char RubiksCube::getColorLetter(COLOR color) {
     }
 }
 
-/*
- * Describe a move using an index
- */
+
 string RubiksCube::getMove(MOVE ind) {
     switch (ind) {
         case MOVE::L:
@@ -69,9 +63,7 @@ string RubiksCube::getMove(MOVE ind) {
     }
 }
 
-/*
- * Perform a move operation on using a Move index.
- */
+
 RubiksCube &RubiksCube::move(MOVE ind) {
     switch (ind) {
         case MOVE::L:
